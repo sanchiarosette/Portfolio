@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanchia Rosette - Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Floating Menu Button -->
+  <button id="menu-toggle" class="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Theme Toggle Button -->
+  <button id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <button id="sidebar-close" class="sidebar-close"><i class="fas fa-times"></i></button>
+    <div class="profile-pic">
+      <img src="assets/image.jpeg" alt="Profile Image" />
+    </div>
+    <h1 class="name">Sanchia Rosette</h1>
+    <p class="location">Chennai, India</p>
+    <p class="email">sanchia2810@gmail.com</p>
+    <p class="phone">+91 8248960767</p>
+    <div class="social-links">
+      <a href="https://github.com/sanchiarosette" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/sanchiarosette" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="sidebar-buttons">
+      <a href="#contact" class="btn-contact">Get in Touch</a>
+      <a href="assets/resume.png" target="_blank" class="btn-resume">View Resume</a>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#currently-learning" class="nav-link">Currently Learning</a>
+      <a href="learning.html" class="nav-link">Learning Journey</a>
+      <a href="#soft-skills" class="nav-link">Soft Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#internship" class="nav-link">Internship</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+      <div class="hero-content">
+        <h1>Turning Ideas Into Interactive Web & Mobile Experiences.</h1>
+        <p>Flutter Developer & Computer Science Student</p>
+      </div>
+      <canvas id="hero-canvas"></canvas>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <div class="certifications-container">
+        <div class="certification-item">
+          <p>Motivated final-year Computer Science student with expertise in Python, Java, web development, SQL, PL/SQL, and Flutter. Seeking challenging roles to apply technical skills and passion for learning. Contributing to meaningful projects and growing as a developer.</p>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-container">
+        <div class="skill-item">
+          <i class="fab fa-python skill-icon"></i>
+          <div class="skill-circle" data-percent="90">
+            <span class="skill-percent">90%</span>
+          </div>
+          <p>Python</p>
+        </div>
+        <div class="skill-item">
+          <i class="fab fa-java skill-icon"></i>
+          <div class="skill-circle" data-percent="85">
+            <span class="skill-percent">85%</span>
+          </div>
+          <p>Java</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-mobile-alt skill-icon"></i>
+          <div class="skill-circle" data-percent="80">
+            <span class="skill-percent">80%</span>
+          </div>
+          <p>Flutter</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-code skill-icon"></i>
+          <div class="skill-circle" data-percent="75">
+            <span class="skill-percent">75%</span>
+          </div>
+          <p>Web Dev</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-database skill-icon"></i>
+          <div class="skill-circle" data-percent="80">
+            <span class="skill-percent">80%</span>
+          </div>
+          <p>SQL</p>
+        </div>
+      </div>
+      <div class="learning-link">
+        <!-- Removed View My Learning Journey button as per user request -->
+    </section>
+
+    <!-- Modern Developer Journey Timeline -->
+    <section id="modern-timeline" class="section modern-timeline" aria-labelledby="modern-timeline-heading">
+      <h2 id="modern-timeline-heading">Developer Journey</h2>
+      <div class="learning-timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fab fa-python"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-details">
+              <h3>2021 - Python</h3>
+              <p>Started programming journey with Python fundamentals, learning syntax, data structures, and basic algorithms.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-database"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-details">
+              <h3>2022 - SQL</h3>
+              <p>Learned database management and SQL queries, working with relational databases and data manipulation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-code"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-details">
+              <h3>2023 - Web Development</h3>
+              <p>Mastered HTML, CSS, and JavaScript for web development, building responsive and interactive websites.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-fire"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-details">
+              <h3>2024 - Firebase</h3>
+              <p>Integrated Firebase for backend services, authentication, and real-time database functionality.</p>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-icon"><i class="fas fa-bolt"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-details">
+              <h3>2025 - API &amp; Firebase</h3>
+              <p>Advanced API development and Firebase integration for scalable web applications.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Currently Learning Section -->
+    <section id="currently-learning" class="section currently-learning">
+      <h2>Currently Learning</h2>
+      <div class="certifications-container">
+        <div class="certification-item">
+          <h3>AI for Mobile Apps</h3>
+          <p>Exploring AI integration in mobile applications to enhance user experience and functionality. Implementing machine learning models.</p>
+        </div>
+        <div class="certification-item">
+          <h3>Flutter with API Authentication</h3>
+          <p>Developing Flutter apps with secure API authentication, backend communication, and data security. Implementing OAuth and JWT tokens.</p>
+        </div>
+        <div class="certification-item">
+          <h3>Improving Coding Skills</h3>
+          <p>Advanced algorithms and data structures, code optimization and debugging techniques, version control and collaborative development, best practices and design patterns.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <h2>Technical Projects</h2>
+      <div class="projects-slider">
+        <div class="project-card">
+          <i class="fas fa-music project-icon"></i>
+          <h3>Music Player Application, Flutter</h3>
+          <p>Developed a cross-platform music player application using the Flutter framework. Implemented features such as playlist management, audio playback controls, and responsive UI. Demonstrated proficiency in Dart programming, mobile UI design, and Flutter SDK.</p>
+          <a href="https://github.com/sanchiarosette/Music-Player-App" target="_blank" class="btn-demo">See on GitHub</a>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-globe project-icon"></i>
+          <h3>Geospatial Land Use & Change Monitoring</h3>
+          <p>Conducted land use and land cover study of Chennai from 2000-24 using Landsat satellite imagery. Preprocessed data in QGIS by cropping to the study area, correcting distortions, and classifying land types (urban areas, vegetation, water bodies, etc.) using supervised classification techniques. Generated comparative maps and visualizations to analyze spatial changes and assess the environmental impact of rapid urbanization.</p>
+          <a href="https://github.com/sanchiarosette" target="_blank" class="btn-demo">See on GitHub</a>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-shopping-cart project-icon"></i>
+          <h3>Glamour Essentials, HTML5, CSS3, JavaScript</h3>
+          <p>Built a fully responsive e-commerce website optimized for mobile and desktop devices. Integrated dynamic content and interactive features to enhance user experience and engagement. Showcased strong front-end development skills with a focus on intuitive UI/UX and performance.</p>
+          <a href="https://github.com/sanchiarosette" target="_blank" class="btn-demo">See on GitHub</a>
+        </div>
+        <div class="project-card">
+          <i class="fas fa-stethoscope project-icon"></i>
+          <h3>MediBot, Flutter & IoT</h3>
+          <p>MediBot is a smart healthcare solution integrating a Flutter-based mobile app with an automated medicine dispenser. It allows users to schedule medications, receive reminders, and access health guidance, while the hardware dispenser ensures timely and accurate pill dispensing. Connected via Bluetooth/Wi-Fi, MediBot helps patients adhere to prescriptions and supports doctors in monitoring treatment.</p>
+          <a href="https://github.com/sanchiarosette" target="_blank" class="btn-demo">See on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hands-on Snippets Section -->
+    <section id="try-my-code" class="section try-my-code">
+      <h2>👉 Hands-on Snippets</h2>
+      <p class="caption-text">Because I believe learning is hands-on, here’s a mini code editor where you can run small JavaScript/Python snippets. It reflects how I experiment with coding daily.</p>
+      <div class="code-runner-container">
+        <div class="tabs">
+          <button class="tab active" data-lang="javascript">JavaScript</button>
+          <button class="tab" data-lang="python">Python</button>
+        </div>
+        <div class="editor-container">
+          <pre id="code-editor" class="language-javascript" contenteditable="true"><code class="language-javascript">// Reverse an array
+const arr = [1, 2, 3, 4, 5];
+const reversed = arr.reverse();
+console.log(reversed);</code></pre>
+        </div>
+        <button id="run-code" class="btn-run">Run</button>
+        <div id="output" class="output-window"></div>
+      </div>
+    </section>
+
+    <!-- Featured Works Section -->
+    <!-- Removed Featured Works Section as per user request -->
+
+    <!-- Internship Section -->
+    <section id="internship" class="section internship">
+      <h2>Internship Experience</h2>
+      <div class="certifications-container">
+        <div class="certification-item">
+          <h3>Codemey Technologies</h3>
+          <p>Currently doing an internship at Codemey Technologies, gaining practical experience in software development, collaborating with teams, and enhancing skills in modern web technologies.</p>
+        </div>
+        <div class="certification-item">
+          <h3>Hackwit Company</h3>
+          <p>Previously completed an internship at Hackwit company focusing on Flutter development.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+      <h2>Education</h2>
+      <div class="education-grid">
+        <div class="education-card">
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="education-content">
+            <h3>Bachelor of Engineering: Information Technology</h3>
+            <h4>Sathayabama University</h4>
+            <div class="education-details">
+              <span class="education-duration">2022 - 2026</span>
+              <span class="education-grade">CGPA: 7.7</span>
+            </div>
+          </div>
+        </div>
+        <div class="education-card">
+          <div class="education-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="education-content">
+            <h3>High School Diploma, PCM</h3>
+            <h4>St. Columban's A.I.Hr.</h4>
+            <div class="education-details">
+              <span class="education-duration">2021 - 2022</span>
+              <span class="education-grade">CGPA: 7.1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section certifications">
+      <h2>Certifications</h2>
+      <div class="certification-item">
+        <h3>Skill Development Program In Java</h3>
+        <p>NSIC Skill Development Center (A Govt. of India Enterprise)</p>
+      </div>
+      <div class="certification-item">
+        <h3>Oracle Certified Foundation Associate</h3>
+      </div>
+      <div class="certification-item">
+        <h3>MongoDB Aggregation Certification</h3>
+      </div>
+      <div class="certification-item">
+        <h3>Hackwit Internship Certificate</h3>
+        <p>Completed internship in Flutter development at Hackwit company.</p>
+      </div>
+    </section>
+
+    <!-- Soft Skills Section -->
+    <section id="soft-skills" class="section soft-skills">
+      <h2>Soft Skills</h2>
+      <div class="soft-skills-grid">
+        <div class="soft-skill-item">
+          <div class="soft-skill-content">
+            <i class="fas fa-users-cog soft-skill-icon"></i>
+            <h3>Leadership</h3>
+            <p>President of the Hardware Club, leading technical initiatives and guiding team members</p>
+          </div>
+        </div>
+        <div class="soft-skill-item">
+          <div class="soft-skill-content">
+            <i class="fas fa-comments soft-skill-icon"></i>
+            <h3>Communication</h3>
+            <p>Conducted Web Development Workshop for peers, effectively sharing knowledge and skills</p>
+          </div>
+        </div>
+        <div class="soft-skill-item">
+          <div class="soft-skill-content">
+            <i class="fas fa-brain soft-skill-icon"></i>
+            <h3>Continuous Learning</h3>
+            <p>Attended Python Webinar and participated in Technical Events to stay updated</p>
+          </div>
+        </div>
+        <div class="soft-skill-item">
+          <div class="soft-skill-content">
+            <i class="fas fa-handshake soft-skill-icon"></i>
+            <h3>Teamwork & Collaboration</h3>
+            <p>Engaged in group projects and club-led activities, fostering collaborative environments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <h2>Contact Me</h2>
+      <div class="contact-container">
+        <div class="contact-info-grid">
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-envelope contact-icon-large"></i>
+            </div>
+            <h3>Email</h3>
+            <p>sanchia2810@gmail.com</p>
+            <a href="mailto:sanchia2810@gmail.com" class="contact-link">Send Email</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-phone contact-icon-large"></i>
+            </div>
+            <h3>Phone</h3>
+            <p>+91 8248960767</p>
+            <a href="tel:+918248960767" class="contact-link">Call Now</a>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-map-marker-alt contact-icon-large"></i>
+            </div>
+            <h3>Location</h3>
+            <p>Chennai, India</p>
+            <a href="https://maps.google.com/?q=Chennai,India" target="_blank" class="contact-link">View Map</a>
+          </div>
+        </div>
+        <div class="thank-you-message">
+          <p>Thank you for taking the time to explore my portfolio. I'm passionate about creating innovative solutions and always open to new opportunities and collaborations.</p>
+          <p>Feel free to reach out via the contact methods above!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

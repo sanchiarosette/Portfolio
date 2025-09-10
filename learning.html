@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learning Journey - Sanchia Rosette</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+<!-- Floating Menu Button -->
+<button id="menu-toggle" class="menu-toggle">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Sidebar Navigation -->
+<aside class="sidebar" id="sidebar">
+  <div class="profile-pic">
+    <img src="assets/image.jpeg" alt="Sanchia Rosette" />
+  </div>
+  <h1 class="name">Sanchia Rosette</h1>
+  <p class="location">Chennai, India</p>
+  <p class="email">sanchia2810@gmail.com</p>
+  <p class="phone">+91 8248960767</p>
+  <div class="social-links">
+    <a href="https://github.com/sanchiarosette" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/sanchiarosette" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="sidebar-buttons">
+    <a href="index.html" class="btn-contact">Back to Portfolio</a>
+    <a href="assets/resume.png" target="_blank" class="btn-resume">View Resume</a>
+  </div>
+  <button id="sidebar-close" class="sidebar-close" aria-label="Close Sidebar">
+    <i class="fas fa-times"></i>
+  </button>
+  <nav class="sidebar-nav">
+    <a href="index.html#hero" class="nav-link">Home</a>
+    <a href="index.html#about" class="nav-link">About</a>
+    <a href="index.html#skills" class="nav-link">Skills</a>
+    <a href="index.html#soft-skills" class="nav-link">Soft Skills</a>
+    <a href="index.html#projects" class="nav-link">Projects</a>
+    <a href="index.html#internship" class="nav-link">Internship</a>
+    <a href="index.html#contact" class="nav-link">Contact</a>
+  </nav>
+</aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section id="hero" class="section hero">
+      <div class="hero-content">
+        <h1 class="hero-title">My Learning Journey</h1>
+        <p class="hero-subtitle">A timeline of my growth and development in technology</p>
+      </div>
+      <canvas id="hero-canvas"></canvas>
+    </section>
+
+    <!-- Skill Tree Section -->
+    <section id="learning" class="section learning">
+      <h2>My Learning Journey</h2>
+      <div class="skill-tree">
+        <div class="skill-branch programming">
+          <div class="skill-node root">
+            <div class="skill-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Programming Fundamentals</h3>
+            <p>Started in 2020 with Python and Java basics</p>
+          </div>
+          <div class="skill-node python">
+            <div class="skill-icon">
+              <i class="fab fa-python"></i>
+            </div>
+            <h4>Python</h4>
+            <p>90% proficiency - Data analysis, automation, ML basics</p>
+          </div>
+          <div class="skill-node java">
+            <div class="skill-icon">
+              <i class="fab fa-java"></i>
+            </div>
+            <h4>Java</h4>
+            <p>85% proficiency - OOP, enterprise apps</p>
+          </div>
+        </div>
+        <div class="skill-branch web-dev">
+          <div class="skill-node web-root">
+            <div class="skill-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Mastered in 2023</p>
+          </div>
+          <div class="skill-node html-css">
+            <div class="skill-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h4>HTML5 & CSS3</h4>
+            <p>Responsive design, modern practices</p>
+          </div>
+          <div class="skill-node js">
+            <div class="skill-icon">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h4>JavaScript</h4>
+            <p>Interactive websites, frameworks</p>
+          </div>
+        </div>
+        <div class="skill-branch databases">
+          <div class="skill-node db-root">
+            <div class="skill-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Databases</h3>
+            <p>SQL & NoSQL expertise</p>
+          </div>
+          <div class="skill-node sql">
+            <div class="skill-icon">
+              <i class="fas fa-table"></i>
+            </div>
+            <h4>SQL</h4>
+            <p>80% proficiency - Query optimization</p>
+          </div>
+          <div class="skill-node nosql">
+            <div class="skill-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h4>MongoDB</h4>
+            <p>Certified in aggregation pipelines</p>
+          </div>
+        </div>
+        <div class="skill-branch mobile">
+          <div class="skill-node mobile-root">
+            <div class="skill-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Development</h3>
+            <p>Flutter focus in 2024</p>
+          </div>
+          <div class="skill-node flutter">
+            <div class="skill-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h4>Flutter</h4>
+            <p>80% proficiency - Cross-platform apps</p>
+          </div>
+        </div>
+        <div class="skill-branch other">
+          <div class="skill-node other-root">
+            <div class="skill-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Specialized Skills</h3>
+            <p>GIS, certifications, soft skills</p>
+          </div>
+          <div class="skill-node gis">
+            <div class="skill-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h4>GIS & QGIS</h4>
+            <p>Remote sensing, environmental analysis</p>
+          </div>
+          <div class="skill-node soft">
+            <div class="skill-icon">
+              <i class="fas fa-users-cog"></i>
+            </div>
+            <h4>Soft Skills</h4>
+            <p>Leadership, communication, teamwork</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Progress Section -->
+    <section id="skills-progress" class="section skills-progress">
+      <h2>Skills Development Progress</h2>
+      <div class="skills-showcase">
+        <div class="skill-progress-item">
+          <div class="skill-header">
+            <i class="fab fa-python skill-icon-large"></i>
+            <div class="skill-info">
+              <h3>Python</h3>
+              <span class="skill-percentage">90%</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 90%"></div>
+          </div>
+          <p>Advanced proficiency in Python programming, data analysis, and automation scripts.</p>
+        </div>
+
+        <div class="skill-progress-item">
+          <div class="skill-header">
+            <i class="fab fa-java skill-icon-large"></i>
+            <div class="skill-info">
+              <h3>Java</h3>
+              <span class="skill-percentage">85%</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%"></div>
+          </div>
+          <p>Strong foundation in Java programming with OOP concepts and enterprise applications.</p>
+        </div>
+
+        <div class="skill-progress-item">
+          <div class="skill-header">
+            <i class="fas fa-mobile-alt skill-icon-large"></i>
+            <div class="skill-info">
+              <h3>Flutter</h3>
+              <span class="skill-percentage">80%</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%"></div>
+          </div>
+          <p>Proficient in cross-platform mobile app development using Flutter and Dart.</p>
+        </div>
+
+        <div class="skill-progress-item">
+          <div class="skill-header">
+            <i class="fas fa-code skill-icon-large"></i>
+            <div class="skill-info">
+              <h3>Web Development</h3>
+              <span class="skill-percentage">75%</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%"></div>
+          </div>
+          <p>Skilled in HTML5, CSS3, JavaScript, and responsive web design.</p>
+        </div>
+
+        <div class="skill-progress-item">
+          <div class="skill-header">
+            <i class="fas fa-database skill-icon-large"></i>
+            <div class="skill-info">
+              <h3>SQL</h3>
+              <span class="skill-percentage">80%</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%"></div>
+          </div>
+          <p>Proficient in SQL database management, query optimization, and relational database design.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

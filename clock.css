@@ -1,0 +1,152 @@
+/* Clock styles with reduced size */
+.clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0c0c0c, #1a1a2e);
+  font-family: 'Courier New', monospace;
+}
+
+.clock-frame {
+  width: min(650px, 95%);
+  height: 150px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffff, inset 0 0 20px rgba(0, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.clock-inner {
+  display: flex;
+  align-items: center;
+  font-size: clamp(28px, 6vw, 55px);
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  letter-spacing: 2px;
+}
+
+.digit-box {
+  width: 60px;
+  height: 75px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #00ffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.digit-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.separator {
+  margin: 0 8px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.date-display {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+  opacity: 0.8;
+}
+
+.am-pm {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 16px;
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
+  opacity: 0.8;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .clock-frame {
+    width: min(90%, 500px);
+    height: 120px;
+  }
+
+  .clock-inner {
+    font-size: clamp(20px, 5vw, 40px);
+  }
+
+  .digit-box {
+    width: 45px;
+    height: 60px;
+    margin: 0 2px;
+  }
+
+  .separator {
+    margin: 0 5px;
+  }
+
+  .date-display {
+    font-size: 12px;
+    bottom: 6px;
+  }
+
+  .am-pm {
+    font-size: 14px;
+    top: 6px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clock-frame {
+    width: min(95%, 400px);
+    height: 100px;
+  }
+
+  .clock-inner {
+    font-size: clamp(18px, 4vw, 35px);
+  }
+
+  .digit-box {
+    width: 35px;
+    height: 50px;
+  }
+
+  .separator {
+    margin: 0 3px;
+  }
+
+  .date-display {
+    font-size: 10px;
+  }
+
+  .am-pm {
+    font-size: 12px;
+  }
+}
